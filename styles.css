@@ -1,12 +1,10 @@
 body {
     height: 100vh;
-    background-color: linear-gradient(
-                to bottom,
-                black 0%,
-                black 50%,
-                white 50%,
-                white 100%
-                );
+    background-color: linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
+    background-color: -moz-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
+    background-color: -webkit-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
+    background-color: -o-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
+
     font-family: Delicious, sans-serif;
     font-weight: 400;
 }
