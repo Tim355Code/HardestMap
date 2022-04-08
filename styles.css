@@ -1,22 +1,116 @@
 body {
     height: 100vh;
-    background: black;
-    background: linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
-    background: -moz-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
-    background: -webkit-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
-    background: -o-linear-gradient(to bottom, black 0%, black 50%, white 50%, white 100%);
-
+    background: linear-gradient(to bottom, black 0%, black 75%, white 75%, white 100%);
     font-family: Delicious, sans-serif;
-    font-weight: 400;
 }
 
-.slider-frame {
-    overflow:hidden;
-    height 800px;
-    width: 1200px;
-    margin-left: 200px;
-    margin-top: 20px;
+.slider{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 350px;
+    transform-origin: center;
+    text-align: center;
+    margin-top: 10px;
 }
+.slides {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slides span{
+    scroll-snap-align: end;
+    flex-shrink: 0;
+    width: 350px;
+    height: 210px;
+    transform-origin: center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slides span img{
+    border-radius: 20px;
+    width: 340px;
+    height: 210px;
+}
+.slider a {
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    top: -20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    transition: background-color 0.6s ease;
+}
+.lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 210px;
+}
+@media only screen and (min-width: 600px){
+    .slider{
+        width: 500px;
+    }
+    .slides span{
+        width: 500px;
+        height: 300px;
+    }
+    .slides span img{
+        width: 485px;
+        height: 300px;
+    }
+    .lock{
+        width: 500px;
+        height: 300px;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .slider{
+        width: 700px;
+    }
+    .slides span{
+        width: 700px;
+        height: 420px;
+    }
+    .slides span img{
+        width: 683px;
+        height: 420px;
+    }
+    .lock{
+        width: 700px;
+        height: 420px;
+    }
+}
+@media only screen and (min-width: 1300px){
+    .slider{
+        width: 1000px;
+    }
+    .slides span{
+        width: 1000px;
+        height: 600px;
+    }
+    .slides span img{
+        width: 975px;
+        height: 600px;
+    }
+    .lock{
+        width: 1000px;
+        height: 600px;
+    }
+}
+
+
 
 .logo {
     padding-top: 0px;
@@ -30,36 +124,43 @@ header::after {
 }
 
 h1 {
-    color: #b7b7b7;
+    color: white;
+    font-weight: 750;
+    font-size: 8vw;
+    margin: 10px 0 5px 0;
 }
 
 nav {
     margin-left: 140px;
 }
 
-hr {
-    display: block;
-    overflow: hidden;
-    border-style: inset;
-    border-width: 1px;
+.profile{
+    filter: invert(100%);
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
-p {
+.subText {
     color: #b7b7b7;
+    font-weight: 600;
+    position: relative;
+    bottom: 3px;
+}
+.cred{
+    color: red;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    text-align: right;
 }
 
 nav li {
     display: inline-block;
-    margin-left: 100px;
-    padding-top: 25px;
-
     position: relative;
+    margin-right: 20px;
 }
 
 nav a {
@@ -72,14 +173,12 @@ nav a {
 nav a::before {
     content: '';
     display: block;
-    height: 5px;
+    height: 2px;
     width: 100%;
     background-color: #b7b7b7;
-
     position: absolute;
-    top: 5px;
+    bottom: 0px;
     width: 0%;
-
     transition: all ease-in-out 250ms;
 }
 
