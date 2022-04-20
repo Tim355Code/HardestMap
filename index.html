@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="bf">
     <header>
         <a href="index.html"><img src="Images/logo.png" alt="logo" class="logo" width="60" height="60"></a>
         <nav>
             <ul>
-                <li><a href="#map"><font size="3">Map</font></a></li>
-                <li><a href="#down"><font size="3">Download</font></a></li>
-                <li><a href="#cred"><font size="3">Credits</font></a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#down">Download</a></li>
+                <li><a href="#cred">Credits</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <center>
             <h1>The Hardest map</h1>
-            <img class="profile"src="Images/profile.png" width="20" height="20"><span class="subText">by Timothy</span><!--you can set the color of this image to the same color of the text and then disable the insert filter in the profile class-->
+            <img class="profile"src="Images/profile.png" width="20" height="20"><span class="subText">by Timothy</span>
         </center>
         <div class="slider" >
             <div class="slides">
@@ -52,6 +53,8 @@
           <a href="#slide-10" onclick="stop(9)"></a>
           <a href="#slide-11" onclick="stop(10)"></a>
       </div>
+      <button id="down">Download</button>
+  </div>
       <script>
         const SLIDES=["slide-1","slide-2","slide-3","slide-4","slide-5","slide-6","slide-7","slide-8","slide-9","slide-10","slide-11"].map(e=>document.getElementById(e));
         let index=0;
@@ -73,10 +76,15 @@
           console.log(e)
       })
   </script>
-  <!-- make a download buttton underneath the slideshow and link it to the download link in the header
-  make a description about the map (if you want you can put the credits) -->
+  <div class="bm">
+    <p>kjdkjskdjksjdkjdksdksjdk</p>
+    <p>kjdkjskdjksjdkjdksdksjdk</p>
+    <p>kjdkjskdjksjdkjdksdksjdk</p>
+    <p>kjdkjskdjksjdkjdksdksjdk</p>
+    <p>kjdkjskdjksjdkjdksdksjdk</p>
+</div>
 </main>
-<footer>
+<footer class="bf" id="cred">
         <center>
             <a class="cred" href="">Support us</a>
             <a class="cred" href="">Contact us</a>
