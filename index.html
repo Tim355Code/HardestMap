@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="bf">
     <header>
         <a href="index.html"><img src="Images/logo.png" alt="logo" class="logo" width="60" height="60"></a>
-        <nav>
+        <nav class="container">
             <ul>
-                <li><a href="#map">Map</a></li>
-                <li><a href="#down">Download</a></li>
-                <li><a href="#cred">Credits</a></li>
+                <li><a href="#map" class="item">Map</a></li>
+                <li><a href="#down" class="item">Download</a></li>
+                <li><a href="#cred" class="item">Credits</a></li>
             </ul>
         </nav>
     </header>
@@ -49,16 +48,24 @@
           <a href="#slide-10" onclick="stop(9)"></a>
           <a href="#slide-11" onclick="stop(10)"></a>
       </div>
-      <button id="down">Download</button>
-  </div>
+      <button id="down" onclick="downloadtxt()"><img class="dwImage" src="Images/down.png" width="50px" height="50px"><span id="downButTxt">Download</span></button>
       <script>
+        function downloadtxt() {
+        document.getElementById("downButTxt").innerHTML = "maintance";
+        }
         const SLIDES=["slide-1","slide-2","slide-3","slide-4","slide-5","slide-6","slide-7","slide-8","slide-9","slide-10","slide-11"].map(e=>document.getElementById(e));
+        let p=document.getElementsByClassName("slides")[0];
         let index=0;
         let handle,pause;
         init=_=>{
           handle=setInterval(_=>{
-            index=(index+1)%SLIDES.length;
-            SLIDES[index].scrollIntoView()
+            if(index==SLIDES.length-1){
+                p.scroll(0,0);
+                index=0;
+            }
+            else{
+                p.scrollBy(SLIDES[index].getBoundingClientRect().width,0)
+            }
         },4000);
       }
       stop=x=>{
@@ -68,23 +75,18 @@
           pause=setTimeout(init,5000);
       }
       init();
-      document.getElementsByClassName("slides")[0].addEventListener("scroll",e=>{
-          console.log(e)
-      })
   </script>
-  <div class="bm">
-    <p>kjdkjskdjksjdkjdksdksjdk</p>
-    <p>kjdkjskdjksjdkjdksdksjdk</p>
-    <p>kjdkjskdjksjdkjdksdksjdk</p>
-    <p>kjdkjskdjksjdkjdksdksjdk</p>
-    <p>kjdkjskdjksjdkjdksdksjdk</p>
+  <div class="descr">
+    <p>A map made for Adrian</p>
 </div>
 </main>
-<footer class="bf" id="cred">
-        <center>
-            <a class="cred" href="">Support us</a>
-            <a class="cred" href="">Contact us</a>
-        </center>
+<footer id="cred" class="cont">
+        <div class="ft">
+        <p class="fti">@TheHardestMap</p>
+        <p class="fti">@MinecraftIsCool</p>
+        <p class="fti">@MoreLikeThis</p>
+    </div>
+        <a href="index.html" class="ft"><img src="Images/logo.png" alt="logo" class="logo" width="55" height="55"></a>
     </footer>
 </body>
 </html>

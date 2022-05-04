@@ -2,6 +2,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Delicious, sans-serif;
+    background-color: black;
 }
 
 .slider{
@@ -70,6 +71,15 @@ button {
     font-weight: bold;
     margin: 2vw 0 2vw 0;
 }
+
+.dwImage{
+    display: inline;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 7px;
+    bottom: 7px;
+}
 @media only screen and (min-width: 600px){
     .slider{
         width: 500px;
@@ -90,6 +100,12 @@ button {
         width: 300px;
         height: 75px;
         font-size: 30px;
+    }
+    .dwImage{
+        width: 60px;
+        height: 60px;
+        left: 10px;
+        bottom: 10px;
     }
 }
 @media only screen and (min-width: 1000px){
@@ -112,6 +128,12 @@ button {
         width: 400px;
         height: 100px;
         font-size: 40px;
+    }
+    .dwImage{
+        width: 80px;
+        height: 80px;
+        left: 13px;
+        bottom: 13px;
     }
 }
 @media only screen and (min-width: 1300px){
@@ -136,6 +158,12 @@ button {
         font-size: 50px;
         border-radius: 25px;
     }
+    .dwImage{
+        width: 100px;
+        height: 100px;
+        left: 17px;
+        bottom: 17px;
+    }
 }
 @media only screen and (min-width: 1500px){
     .slider{
@@ -159,6 +187,12 @@ button {
         font-size: 50px;
         border-radius: 25px;
     }
+    .dwImage{
+        width: 100px;
+        height: 100px;
+        left: 17px;
+        bottom: 17px;
+    }
 }
 .logo {
     padding-top: 0px;
@@ -175,12 +209,7 @@ h1 {
     color: white;
     font-weight: 750;
     font-size: 9vw;
-    margin: 10px 0 5px 0;
-}
-
-nav {
-    margin-left: 140px;
-    padding: 20px;
+    margin: 0;
 }
 
 .profile{
@@ -239,22 +268,47 @@ nav a:hover::before {
     width: 100%;
 }
 
-.bh{
-    padding-top: 8px;
-    background-color: black;
-}
-
-.bm{
-    background-color: white;
+.descr{
+    color: white;
     text-align: center;
+    font-weight: bold;
 }
 
-.bf{
-    padding-bottom: 8px;
-    background-color: black;
+.container{
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.bh, .bm, .bf{
-    padding-left: 8px;
-    padding-right: 8px;
+footer{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ft{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.fti{
+    padding-right:10px;
+}
+
+footer{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+}
+
+footer p{
+    font-weight: 20px;
+    font-size: 14px;
+    color: white;
 }
