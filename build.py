@@ -1,12 +1,18 @@
 import os
 
 
+DOMAIN_ROOT=os.getenv("DOMAIN_ROOT",".").encode("utf-8")
+
+
 
 def copy(src,dst):
 	print(f"  Copying '{src}' to '{dst}'...")
 	os.makedirs(dst[:dst.rindex("/")],exist_ok=True)
 	with open(src,"rb") as rf,open(dst,"wb") as wf:
-		wf.write(rf.read())
+		data=rf.read()
+		if (dst.endswith(".html")):
+			data=data.replace(b"{{HEADER}}",header).replace(b"{{ROOT}}",DOMAIN_ROOT)
+		wf.write(data)
 
 
 
@@ -22,6 +28,9 @@ if (os.path.exists("build")):
 		os.rmdir(k)
 else:
 	os.mkdir("build")
+print("Loading HTML header...")
+with open("src/_header.html","rb") as rf:
+	header=rf.read()
 print("Adding HTML...")
 copy("src/index.html","build/index.html")
 print("Adding CSS...")
