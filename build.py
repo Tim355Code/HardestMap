@@ -33,6 +33,8 @@ with open("src/_header.html","rb") as rf:
 	header=rf.read()
 print("Adding HTML...")
 copy("src/index.html","build/index.html")
+for k in os.listdir("src/html"):
+	copy(f"src/html/{k}",f"build/{k}")
 print("Adding CSS...")
 for k in os.listdir("src/css"):
 	copy(f"src/css/{k}",f"build/css/{k}")
