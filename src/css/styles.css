@@ -1,8 +1,6 @@
 body {
-	height: 100vh;
-	margin: 0;
-	font-family: Delicious, sans-serif;
 	background-color: black;
+	color: white;
 }
 
 .slider{
@@ -194,16 +192,6 @@ button {
 		bottom: 17px;
 	}
 }
-.logo {
-	padding-top: 0px;
-	float: left;
-}
-
-header::after {
-	content: '';
-	display: table;
-	clear: both;
-}
 
 h1 {
 	color: white;
@@ -224,91 +212,8 @@ h1 {
 	position: relative;
 	bottom: 3px;
 }
-.cred{
-	color: red;
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-	text-align: right;
-
-}
-
-nav li {
-	display: inline-block;
-	position: relative;
-	margin-right: 20px;
-}
-
-nav a {
-	color: #b7b7b7;
-	text-decoration: none;
-	text-transform:  uppercase;
-	font-size: 20px;
-}
-
-nav a::before {
-	content: '';
-	display: block;
-	height: 2px;
-	width: 100%;
-	background-color: #b7b7b7;
-	position: absolute;
-	bottom: 0px;
-	width: 0%;
-	transition: all ease-in-out 250ms;
-}
-
-nav a:hover {
-	color: #dfdfdf;
-}
-
-nav a:hover::before {
-	width: 100%;
-}
 
 .descr{
-	color: white;
 	text-align: center;
 	font-weight: bold;
-}
-
-.container{
-	display: flex;
-	height: 60px;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-footer{
-	display: flex;
-	height: 60px;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.ft{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 0 20px 0 20px;
-}
-
-.fti{
-	padding-right:10px;
-}
-
-footer{
-	display: flex;
-	height: 60px;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #262626;
-}
-
-footer p{
-	font-weight: 20px;
-	font-size: 14px;
-	color: white;
 }

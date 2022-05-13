@@ -1,5 +1,5 @@
 downloadtxt=_=>{
-	document.getElementById("downButTxt").innerHTML="maintance";
+	document.getElementById("downButTxt").innerHTML="wip";
 }
 
 
