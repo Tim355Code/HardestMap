@@ -11,7 +11,7 @@ def copy(src,dst):
 	with open(src,"rb") as rf,open(dst,"wb") as wf:
 		data=rf.read()
 		if (dst.endswith(".html")):
-			data=data.replace(b"{{HEADER}}",header).replace(b"{{ROOT}}",DOMAIN_ROOT)
+			data=data.replace(b"{{HEADER}}",header).replace(b"{{FOOTER}}",footer).replace(b"{{ROOT}}",DOMAIN_ROOT)
 		wf.write(data)
 
 
@@ -30,6 +30,9 @@ else:
 	os.mkdir("build")
 print("Loading HTML header...")
 with open("src/_header.html","rb") as rf:
+	header=rf.read()
+print("Loading HTML footer...")
+with open("src/_footer.html","rb") as rf:
 	header=rf.read()
 print("Adding HTML...")
 copy("src/index.html","build/index.html")
