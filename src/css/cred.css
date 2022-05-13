@@ -1,0 +1,111 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+header {
+	background-color: black;
+}
+
+h1{
+	margin: 50px 0 25px 0;
+	color: white;
+	font-size: 64px;
+	font-weight: bold;
+	line-height: 68px;
+	text-align: center;
+}
+
+p{
+	margin: 0;
+}
+
+.intro{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: black;
+	color: white;
+}
+
+.intro p{
+	margin-top: 0;
+	text-align: center;
+	opacity: 85%;
+	line-height: 20px;
+	padding-bottom: 50px;
+	color: #9eacc5;
+	font-weight: bold;
+}
+
+.names{
+	display: grid;
+	grid-template-columns: 1fr 2fr 150px;
+	justify-content: space-around;
+	padding-left: 50px;
+}
+
+.container {
+	display: grid;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	grid-template-rows: 175px 175px 175px;
+	grid-gap: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.subcontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	border-radius: 6px;
+	background-color: white;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.subcontainer:hover{
+	background-color: #f6f5ff;
+}
+
+.box-shadow-card-border{
+	box-shadow: 
+	0px 0px 0px 1px rgb(53 72 91 / 14%),
+	0 3px 2px rgb(0 0 0 / 4%),
+	0 7px 5px rgb(0 0 0 / 2%), 
+	0 13px 10px rgb(0 0 0 / 2%), 
+	0 22px 17px rgb(0 0 0 / 2%);
+}
+
+.circle{
+	display: inline-block;
+	background-color: white;
+	width: 100%;
+	height: 10px;
+}
+
+.Ctop{
+	border-radius: 100% 100% 0 0;
+	box-shadow: 0px 5px 4px -5px black inset;
+}
+
+.Cbot{
+	border-radius: 0 0 100% 100%;
+	box-shadow: 0px -5px 4px -5px black inset;
+	position: relative;
+	bottom: 4px;
+}
+
+.bg-ft{
+	background-color: #262626;
+}
+
+.top-patreon-supporters{
+	font-weight: bold;
+}
+
+.imgas{
+	position: relative;
+	bottom: 38.5px;
+}
