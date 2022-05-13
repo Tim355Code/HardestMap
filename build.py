@@ -33,7 +33,7 @@ with open("src/_header.html","rb") as rf:
 	header=rf.read()
 print("Loading HTML footer...")
 with open("src/_footer.html","rb") as rf:
-	header=rf.read()
+	footer=rf.read()
 print("Adding HTML...")
 copy("src/index.html","build/index.html")
 for k in os.listdir("src/html"):
