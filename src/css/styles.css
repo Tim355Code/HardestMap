@@ -46,7 +46,7 @@ body {
 	justify-content: center;
 	background-color: lightgreen;
 	border-radius: 50%;
-	margin: 0 0 0.5rem 0;
+	margin: 0 0.05rem 0.5rem 0.05rem;
 	position: relative;
 	transition: background-color 0.6s ease;
 }
@@ -57,7 +57,7 @@ body {
 	width: 350px;
 	height: 210px;
 }
-button {
+.dwbutton {
 	position: relative;
 	left: 50%;
 	transform: translate(-50%,0);
@@ -94,7 +94,7 @@ button {
 		width: 500px;
 		height: 300px;
 	}
-	button {
+	.dwbutton {
 		width: 300px;
 		height: 75px;
 		font-size: 30px;
@@ -122,7 +122,7 @@ button {
 		width: 750px;
 		height: 420px;
 	}
-	button {
+	.dwbutton {
 		width: 400px;
 		height: 100px;
 		font-size: 40px;
@@ -150,7 +150,7 @@ button {
 		width: 1000px;
 		height: 600px;
 	}
-	button {
+	.dwbutton {
 		width: 500px;
 		height: 125px;
 		font-size: 50px;
@@ -179,7 +179,7 @@ button {
 		width: 1250px;
 		height: 720px;
 	}
-	button {
+	.dwbutton {
 		width: 500px;
 		height: 125px;
 		font-size: 50px;
