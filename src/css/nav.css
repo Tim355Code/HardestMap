@@ -11,6 +11,16 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-left: 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.logo{
+	position: relative;
+	top: 2px;
 }
 
 .hdcontainer{
@@ -18,13 +28,8 @@ header {
 	height: 60px;
 	justify-content: space-around;
 	align-items: center;
-}
-
-.hdcontainer ul {
 	margin: 0;
 	padding: 0;
-	text-align: right;
-
 }
 
 .hdcontainer li {
@@ -33,14 +38,13 @@ header {
 	margin-right: 20px;
 }
 
-.hdcontainer a {
+.hdcItem {
 	color: #b7b7b7;
-	text-decoration: none;
 	text-transform:  uppercase;
 	font-size: 20px;
 }
 
-.hdcontainer a::before {
+.hdcItem::before {
 	content: '';
 	display: block;
 	height: 2px;
@@ -52,12 +56,33 @@ header {
 	transition: all ease-in-out 250ms;
 }
 
-.hdcontainer a:hover {
+.hdcItem:hover {
 	color: #dfdfdf;
 }
 
-.hdcontainer a:hover::before {
+.hdcItem:hover::before {
 	width: 100%;
+}
+
+.signInbutton {
+	width: 90px;
+	height: 45px;
+	padding: 0;
+	border-radius: 50px;
+	font-size: 15px;
+	border: 4px solid #5f95e7;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+.signInbutton{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+.signInbutton:hover{
+	background-color: #5f95e794;
 }
 
 .ft{

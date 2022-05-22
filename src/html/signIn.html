@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Sign in &ndash; Hardestmap</title>
 	<meta charset="uft-8">
-	<link rel="stylesheet" href="{{ROOT}}/css/singIn.css">
-	<link rel="stylesheet" href="{{ROOT}}/css/nav.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ROOT}}/css/form.css">
+	<link rel="stylesheet" href="{{ROOT}}/css/signIn.css">
 </head>
 <body>
-	{{HEADER}}
 	<main>
-		
+		<a href="{{ROOT}}/index.html" class=logo-header><img src="{{ROOT}}/img/logo.png" width="54" height="58"></a>
+		<form>
+			<legend>Sign in to Hardestmap</legend>
+			<fieldset class="info smoothBorder">
+				<label for="sign-in_field" class="signIn_label textLook">Username or email address</label>
+				<input id="sign-in_field" type="email" class="smoothBorder defInput">
+				<label for="password_field" class="signIn_label textLook password_label"><span>Password</span><a href="{{ROOT}}/reset_password.html" class="linkLook">Forgot password?</a></label>
+				<input id="password_field" type="password" class="smoothBorder defInput">
+				<input type="submit" class="submit-button smoothBorder" value="Sign in">
+			</fieldset>
+			<p class="cAccount textLook smoothBorder">New to Hardestmap? <a href="{{ROOT}}/signUp.html" class="linkLook">Create an account.</a></p>
+		</form>
 	</main>
+</body>
 </html>

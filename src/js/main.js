@@ -2,8 +2,6 @@ downloadtxt=_=>{
 	document.getElementById("downButTxt").innerHTML="wip";
 }
 
-
-
 document.addEventListener("DOMContentLoaded",_=>{
 	const button_root=document.getElementsByClassName("slider")[0];
 	const slide_root=document.getElementsByClassName("slides")[0];
