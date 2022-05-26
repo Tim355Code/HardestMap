@@ -1,0 +1,16 @@
+body{
+	margin: 0;
+}
+
+h1{
+	font-size: 8vw;
+	font-weight: 100;
+}
+
+h3{
+	text-align: center;
+}
+
+.unMaint{
+	width: 100vw;
+}
