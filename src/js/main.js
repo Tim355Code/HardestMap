@@ -3,7 +3,7 @@ downloadtxt=_=>{
 }
 
 document.addEventListener("DOMContentLoaded",_=>{
-	const button_root=document.getElementsByClassName("slider")[0];
+	const button_root=document.getElementsByClassName("Sbuttons")[0];
 	const slide_root=document.getElementsByClassName("slides")[0];
 	let index=0;
 	let interval_handle;
@@ -40,5 +40,6 @@ document.addEventListener("DOMContentLoaded",_=>{
 			sum+=w;
 		}
 	});
+	document.getElementsByClassName("Sbuttons")[0].style.width = document.getElementsByClassName("Sbuttons")[0].getBoundingClientRect().width+5+"px";
 	restart_slides();
 });

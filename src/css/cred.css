@@ -109,3 +109,14 @@ p{
 	position: relative;
 	bottom: 38.5px;
 }
+
+@media only screen and (max-width: 600px){
+	.names{
+		padding-left: 25px;
+		grid-template-columns: 1.5fr 1.5fr 125px;
+	}
+
+	h1{
+		font-size: 32px;
+	}
+}
