@@ -40,6 +40,5 @@ document.addEventListener("DOMContentLoaded",_=>{
 			sum+=w;
 		}
 	});
-	document.getElementsByClassName("Sbuttons")[0].style.width = document.getElementsByClassName("Sbuttons")[0].getBoundingClientRect().width+5+"px";
 	restart_slides();
 });

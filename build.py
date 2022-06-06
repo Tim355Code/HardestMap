@@ -1,4 +1,5 @@
 import os
+import shutil
 
 
 DOMAIN_ROOT=os.getenv("DOMAIN_ROOT",".").encode("utf-8")
@@ -11,7 +12,7 @@ def copy(src,dst):
 	with open(src,"rb") as rf,open(dst,"wb") as wf:
 		data=rf.read()
 		if (dst.endswith(".html")):
-			data=data.replace(b"{{HEADER}}",header).replace(b"{{FOOTER}}",footer).replace(b"{{ROOT}}",DOMAIN_ROOT)
+			data=data.replace(b"{{HEAD}}",head).replace(b"{{HHEADER}}",homeheader).replace(b"{{MHEADER}}",mainheader).replace(b"{{FOOTER}}",footer).replace(b"{{ROOT}}",DOMAIN_ROOT)
 		wf.write(data)
 
 
@@ -28,14 +29,19 @@ if (os.path.exists("build")):
 		os.rmdir(k)
 else:
 	os.mkdir("build")
+print("Loading HTML head...")
+with open("src/indents/_head.html","rb") as rf:
+	head=rf.read()	
 print("Loading HTML header...")
-with open("src/_header.html","rb") as rf:
-	header=rf.read()
+with open("src/indents/_homeheader.html","rb") as rf:
+	homeheader=rf.read()
+with open("src/indents/_mainheader.html","rb") as rf:
+	mainheader=rf.read()
 print("Loading HTML footer...")
-with open("src/_footer.html","rb") as rf:
+with open("src/indents/_footer.html","rb") as rf:
 	footer=rf.read()
 print("Adding HTML...")
-copy("src/index.html","build/index.html")
+copy("src/html/index.html","build/index.html")
 for k in os.listdir("src/html"):
 	copy(f"src/html/{k}",f"build/{k}")
 print("Adding CSS...")
@@ -46,7 +52,7 @@ for k in os.listdir("src/js"):
 	copy(f"src/js/{k}",f"build/js/{k}")
 print("Adding images...")
 for k in os.listdir("rsrc/img"):
-	copy(f"rsrc/img/{k}",f"build/img/{k}")
+	shutil.copytree(f"rsrc/img/{k}",f"build/img/{k}")
 print("Adding fonts...")
 for k in os.listdir("rsrc/font"):
 	copy(f"rsrc/font/{k}",f"build/font/{k}")

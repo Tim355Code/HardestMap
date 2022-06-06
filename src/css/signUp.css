@@ -8,6 +8,15 @@ form{
 	margin-top: 200px;
 }
 
+@media only screen and (max-width: 600px){
+	form{
+		width: 300px;
+	}
+	.signIn-tx{
+		display: none !important;
+	}
+}
+
 .information{
 	display: flex;
 	flex-direction: column;
@@ -15,6 +24,7 @@ form{
 	margin: 0;
 	padding: 14px;
 	background-color: #020010;
+	border-radius: 25px 6px 25px 6px !important;
 	box-shadow: 
 	0px 0px 0px 1px rgb(53 72 91 / 14%),
 	0 3px 2px rgb(0 0 0 / 4%),
@@ -63,6 +73,10 @@ form{
 	border-color: #30f5ff;
 }
 
+.submit-button{
+	margin: auto;
+}
+
 label{
 	display: inline-block;
 	position: relative;
@@ -104,42 +118,32 @@ label{
 
 .glow{
 	position: absolute;
-	top: -10px;
-	left: 0px;
+	top: 0;
 	color: white;
 	border-radius: 100px;
 	background-color: transparent;
 }
 
 .blue{
-	color: #6e6ef7c2;
-	top: -20px;
-	left: 0px;
+	color: #4d4d9d;
 	background-color: transparent;
-	padding: 10px;
-	margin-left: -100px;
-	box-shadow: 110px 320px 100px 100px;
+	padding: 1px;
+	box-shadow: 0 300px 100px 120px;
 	z-index: -1;
 }
 
 .purple{
 	color: #d972d99c;
-	top: -20px;
-	left: 0px;
 	background-color: transparent;
-	padding: 10px;
-	margin-left: -70px;
-	box-shadow: 100vw 520px 100px 100px;
+	padding: 1px;
+	box-shadow: 0 450px 100px 100px;
 	z-index: -1;
 }
 
 .pink{
 	color: #e75e76e3;
-	top: -20px;
-	left: 0px;
 	background-color: transparent;
-	padding: 10px;
-	margin-left: -50px;
-	box-shadow: 100vw 270px 100px 100px;
+	padding: 1px;
+	box-shadow: 300px 200px 100px 100px;
 	z-index: -1;
 }

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{{HEAD}}
 	<title>Sign in &ndash; Hardestmap</title>
-	<meta charset="uft-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{{ROOT}}/css/form.css">
 	<link rel="stylesheet" href="{{ROOT}}/css/signIn.css">
+	<script type="text/javascript" src="{{ROOT}}/js/form.js"></script>
 </head>
 <body>
 	<main>
-		<a href="{{ROOT}}/index.html" class=logo-header><img src="{{ROOT}}/img/logo.png" width="54" height="58"></a>
-		<form>
+		<a href="{{ROOT}}/index.html" class=logo-header><img src="{{ROOT}}/img/webpage/logo.png" width="54" height="58"></a>
+		<form action="profile.html" method="post" autocomplete="on" onsubmit="submitInfo()">
 			<legend>Sign in to Hardestmap</legend>
 			<fieldset class="info smoothBorder">
 				<label for="sign-in_field" class="signIn_label textLook">Username or email address</label>
-				<input id="sign-in_field" type="email" class="smoothBorder defInput">
+				<input id="sign-in_field" type="email" class="smoothBorder defInput" required autofocus>
 				<label for="password_field" class="signIn_label textLook password_label"><span>Password</span><a href="{{ROOT}}/reset_password.html" class="linkLook">Forgot password?</a></label>
-				<input id="password_field" type="password" class="smoothBorder defInput">
+				<input id="password_field" type="password" class="smoothBorder defInput" required>
 				<input type="submit" class="submit-button smoothBorder" value="Sign in">
 			</fieldset>
 			<p class="cAccount textLook smoothBorder">New to Hardestmap? <a href="{{ROOT}}/signUp.html" class="linkLook">Create an account.</a></p>
