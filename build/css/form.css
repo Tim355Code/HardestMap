@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+}
+
+main{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+legend{
+	margin: 0 0 28px 0;
+	font-family: "Roboto", sans-serif;
+	font-weight: 150;
+	font-size: 26px;
+	text-align: center;
+}
+
+.logo-header{
+	margin: 40px 0 32px;
+}
+
+.logo-header img{
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: border-color 0.8s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.logo-header img:hover{
+	border-color: black;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 14px;
+	background-color: #f6f8fa;
+}
+
+.defInput{
+	margin-bottom: 16px;
+	font-size: 14px;
+	transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+	transition-property: box-shadow;
+	line-height: 20px;
+	padding: 5px 12px;
+}
+
+.defInput:focus{
+	outline: none;
+	border-color: #0969da;
+	box-shadow: 0 0 0 2px #0969da78;
+}
+
+.smoothBorder{
+	border: 1px solid #dce1e7;
+	border-radius: 6px;
+}
+
+.submit-button{
+	background-color: #2aa94d;
+	border-color: #898989c7;
+	color: white;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 5px 12px;
+}
+
+.submit-button:hover{
+	background-color: #2f994c;
+}
+
+.signIn_label{
+	margin-bottom: 8px;
+}
+
+.password_label{
+	display: flex;
+	justify-content: space-between;
+}
+
+.textLook{
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.cAccount{
+	margin: 16px 0;
+	border-radius: 6px;
+	padding: 14px;
+	text-align: center;
+}
+
+.linkLook{
+	text-decoration: none;
+	color: #1174e9;
+}
+
+p .linkLook:hover{
+	text-decoration: underline;
+}

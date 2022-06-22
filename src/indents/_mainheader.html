@@ -1,5 +1,38 @@
 <header>
-	<nav>
+	<nav class="phone">
+		<ul>
+			<li><a href="{{ROOT}}/index.html"><img src="{{ROOT}}/img/webpage/logo.png" width="32" height="34.37"></a></li>
+			<li><details id="iconDetails" class="details-overlay">
+				<summary><img class="iconimg" src="{{ROOT}}/img/webpage/profileIcons/5.png" width="25px" height="25px"></summary>
+				<details-menu class="dropdown-menu">
+					<ul>
+						<div>
+						</div>
+						<li>
+							<a href="{{ROOT}}/profile.html">profile</a>
+						</li>
+						<li>
+							<a href="{{ROOT}}/projects.html">projects</a>
+						</li>
+						<li>
+							<div class="line"></div>
+						</li>
+						<li>
+							<a href="{{ROOT}}/settings.html" class="flexing"><span>settings</span><img src="{{ROOT}}/img/webpage/cogwheel.png"></a>
+						</li>
+						<li>
+							<div class="line"></div>
+						</li>
+						<li>
+							<a class="flexing"><span>sign out</span><img src="{{ROOT}}/img/webpage/sign-out-icon.jpg" class="signoutimg"></a>
+						</li>
+					</ul>
+				</details-menu>
+				</details>
+			</li>
+		</ul>
+	</nav>
+	<nav class="nphone">
 		<ul>
 			<li><a href="{{ROOT}}/index.html"><img src="{{ROOT}}/img/webpage/logo.png" width="32" height="34.37"></a></li>
 			<li>
@@ -7,34 +40,40 @@
 					<input type="text" placeholder="Search..." name="search" class="srch" autocomplete="off">
 				</form>
 			</li>
-			<li><a href="">Downloads</a></li>
-			<li><a href="">Projects</a></li>
+			<li><a href="{{ROOT}}/projects.html">Projects</a></li>
 		</ul>
 	</nav>
-	<nav>
+	<nav class="nphone">
 		<ul>
-			<li><a href="" class="random"><img width="25px" height="25px" src="{{ROOT}}/img/webpage/random.png"></a></li>
+			<li><a href="{{ROOT}}/random.html" class="random"><img width="25px" height="25px" src="{{ROOT}}/img/webpage/random.png"></a></li>
+			<li><details id="iconDetails" class="details-overlay">
+				<summary><img class="iconimg" src="{{ROOT}}/img/webpage/profileIcons/5.png" width="25px" height="25px"></summary>
+				<details-menu class="dropdown-menu">
+					<ul>
+						<div>
+						</div>
+						<li>
+							<a href="{{ROOT}}/profile.html">profile</a>
+						</li>
+						<li>
+							<a href="{{ROOT}}/projects.html">projects</a>
+						</li>
+						<li>
+							<div class="line"></div>
+						</li>
+						<li>
+							<a href="{{ROOT}}/settings.html" class="flexing"><span>settings</span><img src="{{ROOT}}/img/webpage/cogwheel.png"></a>
+						</li>
+						<li>
+							<div class="line"></div>
+						</li>
+						<li>
+							<a class="flexing"><span>sign out</span><img src="{{ROOT}}/img/webpage/sign-out-icon.jpg" class="signoutimg"></a>
+						</li>
+					</ul>
+				</details-menu>
+				</details>
+			</li>
 		</ul>
 	</nav>
 </header>
-<div class="sidebar">
-	<div class="sc">
-		<h4>your projects<a href="" class="new"><img src="{{ROOT}}/img/webpage/bookmark.png" width="20px" height="20px">New</a></h4>
-		<div class="content">
-			<form>
-				<input type="text" placeholder="Find a project..." name="search" class="srch" autocomplete="off">
-			</form>
-			<p>
-				Any projects you'll make will be shown here
-			</p>
-		</div>
-	</div>
-	<div class="sc last">
-		<h4>recent activety</h4>
-		<div class="content">
-			<p>
-				Whenever you do something on HardestMap your activity will be shown here	
-			</p>
-		</div>
-	</div>
-</div>

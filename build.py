@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-DOMAIN_ROOT=os.getenv("DOMAIN_ROOT",".").encode("utf-8")
+DOMAIN_ROOT=os.getenv("DOMAIN_ROOT",os.getcwd()+"/build/").encode("utf-8")
 
 
 
@@ -12,7 +12,7 @@ def copy(src,dst):
 	with open(src,"rb") as rf,open(dst,"wb") as wf:
 		data=rf.read()
 		if (dst.endswith(".html")):
-			data=data.replace(b"{{HEAD}}",head).replace(b"{{HHEADER}}",homeheader).replace(b"{{MHEADER}}",mainheader).replace(b"{{FOOTER}}",footer).replace(b"{{ROOT}}",DOMAIN_ROOT)
+			data=data.replace(b"{{HEAD}}",head).replace(b"{{HHEADER}}",homeheader).replace(b"{{MHEADER}}",mainheader).replace(b"{{HFOOTER}}",homefooter).replace(b"{{MFOOTER}}",mainfooter).replace(b"{{ROOT}}",DOMAIN_ROOT)
 		wf.write(data)
 
 
@@ -38,8 +38,10 @@ with open("src/indents/_homeheader.html","rb") as rf:
 with open("src/indents/_mainheader.html","rb") as rf:
 	mainheader=rf.read()
 print("Loading HTML footer...")
-with open("src/indents/_footer.html","rb") as rf:
-	footer=rf.read()
+with open("src/indents/_homefooter.html","rb") as rf:
+	homefooter=rf.read()
+with open("src/indents/_mainfooter.html","rb") as rf:
+	mainfooter=rf.read()
 print("Adding HTML...")
 copy("src/html/index.html","build/index.html")
 for k in os.listdir("src/html"):
