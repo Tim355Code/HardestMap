@@ -1,0 +1,117 @@
+body {
+	display: grid;
+	grid-template-rows: 60px 1fr 60px;
+	grid-template-areas: "header" "main" "footer";
+	margin: 0;
+	font-family: Delicious, sans-serif;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+@media only screen and (max-width: 600px){
+	.hd-hide{
+		display: none;
+	}
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+.logo{
+	position: relative;
+	top: 2px;
+}
+
+.hdcontainer{
+	display: flex;
+	height: 60px;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.hdcontainer li {
+	display: inline-block;
+	position: relative;
+	margin-right: 20px;
+}
+
+.hdcItem {
+	color: #b7b7b7;
+	text-transform:  uppercase;
+	font-size: 20px;
+}
+
+.hdcItem::before {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: #b7b7b7;
+	position: absolute;
+	bottom: 0px;
+	width: 0%;
+	transition: all ease-in-out 250ms;
+}
+
+.hdcItem:hover {
+	color: #dfdfdf;
+}
+
+.hdcItem:hover::before {
+	width: 100%;
+}
+
+.signInbutton {
+	width: 90px;
+	height: 45px;
+	padding: 0;
+	border-radius: 50px;
+	font-size: 15px;
+	border: 4px solid #5f95e7;
+	background-color: transparent;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+.signInbutton:hover{
+	background-color: #5f95e794;
+}
+
+.ft{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 20px 0 20px;
+}
+
+.fti{
+	padding-right:10px;
+}
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #262626;
+}
+
+footer p{
+	font-weight: 20px;
+	font-size: 14px;
+	color: white;
+}

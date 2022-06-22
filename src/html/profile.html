@@ -5,18 +5,47 @@
 	{{HEAD}}
 	<link rel="stylesheet" href="{{ROOT}}/css/profile.css">
 	<link rel="stylesheet" href="{{ROOT}}/css/nav.css">
+	<script type="text/javascript" src="{{ROOT}}/js/tab.js"></script>
 </head>
 <body>
 	{{MHEADER}}
+	<div class="sidebar">
+		<div class="sc">
+			<h4>your projects<a href="{{ROOT}}/html/new.html" class="new"><img src="{{ROOT}}/img/webpage/bookmark.png" width="20px" height="20px">New</a></h4>
+			<div class="content">
+				<form>
+					<input type="text" placeholder="Find a project..." name="search" class="srch" autocomplete="off">
+				</form>
+				<p>
+					Any projects you'll make will be shown here
+				</p>
+			</div>
+		</div>
+		<div class="sc last">
+			<h4>recent activaty</h4>
+			<div class="content">
+				<p>
+					Whenever you do something on HardestMap your activity will be shown here	
+				</p>
+			</div>
+		</div>
+	</div>
 	<main>
-		<ul>
-			<li>following</li>
-			<li>for you</li>
-			<li>latest</li>
+		<ul class="ulButton">
+			<li class="Bli" id="Followingbut"><button onclick="opentab('Following')" class="tabButton" style="font-weight:bold" id="butFollowing">Following</button></li>
+			<li class="Bli"  id="For youbut"><button onclick="opentab('For you')" class="tabButton" id="butFor you">For you</button></li>
+			<li class="Bli"  id="Latestbut"><button onclick="opentab('Latest')" class="tabButton" id="butLatest">Latest</button></li>
 		</ul>
+		<div id="Following" class="tab">
+			<h2>Coming soon</h2>
+		</div>
+		<div id="For you" class="tab" style="display:none">
+			<h2>In progress</h2>
+		</div>
+		<div id="Latest" class="tab" style="display:none">
+			<h2>It's only the beta version</h2>
+		</div>
 	</main>
-	<footer>
-		<p>ijj</p>
-	</footer>
+	{{MFOOTER}}
 </body>
 </html>

@@ -1,0 +1,277 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+.slider{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 350px;
+	transform-origin: center;
+	text-align: center;
+	margin-top: 10px;
+}
+.slides {
+	display: flex;
+	overflow-x: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+}
+.slides span{
+	scroll-snap-align: end;
+	flex-shrink: 0;
+	width: 350px;
+	height: 210px;
+	transform-origin: center;
+	transition: transform 0.5s;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slides span img{
+	border-radius: 20px;
+	width: 340px;
+	height: 210px;
+}
+.slider a {
+	cursor: pointer;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 2px;
+	background-color: lightgreen;
+	border-radius: 50%;
+	position: relative;
+	transition: background-color 0.6s ease;
+}
+.lock {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 350px;
+	height: 210px;
+}
+
+.Sbuttons{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+	bottom: 20px;
+	height: 20px;
+	z-index: 1;
+	padding: 0 2px;
+}
+
+.SbuttonsB{
+	display: inline-flex;
+	justify-content: space-evenly;
+	position: relative;
+	bottom: 18px;
+	background-color: transparent;
+	width: 20px;
+	height: 10px;
+}
+
+.SbuttonsB1,.SbuttonsB2{
+	color: black;
+}
+
+.SbuttonsB1{
+	left: 4px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 10px 0;
+}
+
+.SbuttonsB2{
+	right: 4px;
+	border-bottom-left-radius: 10px;
+	box-shadow: -10px 0;
+}
+
+.dwbutton {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 200px;
+	height: 50px;
+	border-radius: 20px;
+	background: linear-gradient(-45deg, #454545 0%, #404040 15%, #9a9a9a 15%,#777777);
+	font-size: 20px;
+	font-weight: bold;
+	margin: 2vw 0 2vw 0;
+}
+
+.dwImage{
+	display: inline;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 7px;
+	bottom: 7px;
+}
+@media only screen and (min-width: 600px){
+	.slider{
+		width: 500px;
+	}
+	.slides span{
+		width: 500px;
+		height: 300px;
+	}
+	.slides span img{
+		width: 485px;
+		height: 300px;
+	}
+	.lock{
+		width: 500px;
+		height: 300px;
+	}
+	.dwbutton {
+		width: 300px;
+		height: 75px;
+		font-size: 30px;
+	}
+	.dwImage{
+		width: 60px;
+		height: 60px;
+		left: 10px;
+		bottom: 10px;
+	}
+}
+@media only screen and (min-width: 1000px){
+	.slider{
+		width: 750px;
+	}
+	.slides span{
+		width: 750px;
+		height: 420px;
+	}
+	.slides span img{
+		width: 700px;
+		height: 420px;
+	}
+	.lock{
+		width: 750px;
+		height: 420px;
+	}
+	.dwbutton {
+		width: 400px;
+		height: 100px;
+		font-size: 40px;
+	}
+	.dwImage{
+		width: 80px;
+		height: 80px;
+		left: 13px;
+		bottom: 13px;
+	}
+}
+@media only screen and (min-width: 1300px){
+	.slider{
+		width: 1000px;
+	}
+	.slides span{
+		width: 1000px;
+		height: 600px;
+	}
+	.slides span img{
+		width: 975px;
+		height: 600px;
+	}
+	.lock{
+		width: 1000px;
+		height: 600px;
+	}
+	.dwbutton {
+		width: 500px;
+		height: 125px;
+		font-size: 50px;
+		border-radius: 25px;
+	}
+	.dwImage{
+		width: 100px;
+		height: 100px;
+		left: 17px;
+		bottom: 17px;
+	}
+	.slider a{
+		width: 20px;
+		height: 20px;
+		margin: 0 3px;
+	}
+	.Sbuttons{
+		height: 26px;
+		bottom: 26px;
+	}
+	.SbuttonsB{
+		width: 26px;
+		height: 13px;
+		bottom: 23px;
+	}
+	.SbuttonsB1{
+		box-shadow: 13px 0;
+		border-bottom-right-radius: 13px;
+	}
+	.SbuttonsB2{
+		box-shadow: -13px 0;
+		border-bottom-left-radius: 13px;
+	}
+}
+@media only screen and (min-width: 1500px){
+	.slider{
+		width: 1250px;
+	}
+	.slides span{
+		width: 1250px;
+		height: 720px;
+	}
+	.slides span img{
+		width: 1200px;
+		height: 720px;
+	}
+	.lock{
+		width: 1250px;
+		height: 720px;
+	}
+	.dwbutton {
+		width: 500px;
+		height: 125px;
+		font-size: 50px;
+		border-radius: 25px;
+	}
+	.dwImage{
+		width: 100px;
+		height: 100px;
+		left: 17px;
+		bottom: 17px;
+	}
+}
+
+h1 {
+	color: white;
+	font-weight: 750;
+	font-size: 9vw;
+	margin: 0;
+}
+
+.profile{
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.subText {
+	color: #b7b7b7;
+	font-weight: 600;
+	position: relative;
+	bottom: 3px;
+}
+
+.descr{
+	text-align: center;
+	font-weight: bold;
+}
